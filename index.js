@@ -14,6 +14,10 @@ function addTodo(){
   let dateElement = document.querySelector('#todoDate')
   let todoItem = inputElement.value ;
   let todoDate = dateElement.value ;
+  if (todoItem === '' || todoDate === '') {
+    alert('Please enter both task and date!');
+    return;
+  }
   todoList.push({item:todoItem, dueDate:todoDate});
   inputElement.value = '';
   dateElement.value = '';
